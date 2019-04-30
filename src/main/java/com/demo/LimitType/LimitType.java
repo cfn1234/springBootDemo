@@ -18,4 +18,6 @@ public enum LimitType {
 	 * 根据请求者IP
 	 */
 	IP;
+
+
 }
