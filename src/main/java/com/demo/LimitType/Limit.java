@@ -1,5 +1,7 @@
 package com.demo.LimitType;
 
+import org.springframework.web.servlet.HandlerInterceptor;
+
 import java.lang.annotation.*;
 
 /**
@@ -58,4 +60,6 @@ public @interface  Limit {
 	 * @return LimitType
 	 */
 	LimitType limitType() default LimitType.CUSTOMER;
+
+	Class<? extends HandlerInterceptor>[] value() default {};
 }
