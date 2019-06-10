@@ -20,6 +20,7 @@ import java.io.Serializable;
  */
 @Configuration
 public class RedisConfig {
+
 	@Bean
 	public RedisTemplate<String, Serializable> limitRedisTemplate(LettuceConnectionFactory redisConnectionFactory) {
 		RedisTemplate<String, Serializable> template = new RedisTemplate<>();
