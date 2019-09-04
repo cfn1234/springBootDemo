@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.demo</groupId>
-    <artifactId>springBootDemo</artifactId>
+    <artifactId>spring</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>jar</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -17,6 +17,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <docker.registry>192.168.6.141:5000</docker.registry>
     </properties>
 
     <dependencies>
@@ -61,12 +62,29 @@
 
     </dependencies>
 
-    <build>
+   <!-- <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.13</version>
+                <configuration>
+                    <imageName>${docker.registry}/${project.groupId}/${project.artifactId}:${project.version}</imageName>
+                    <dockerDirectory>${project.build.outputDirectory}</dockerDirectory>
+                    <baseImage>java</baseImage>
+                    <skipDockerBuild>false</skipDockerBuild>
+                    <resources>
+                        <resource>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
         </plugins>
-    </build>
+    </build>-->
 </project>
