@@ -2,6 +2,8 @@ package com.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 /**
  * <br>
@@ -13,7 +15,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since [产品/模块版本] （可选）
  */
 @SpringBootApplication
-public class BootApplication {
+public class BootApplication extends SpringBootServletInitializer {
+
+	// 外部容器启动类
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+
+		return builder.sources(BootApplication.class);
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(BootApplication.class, args);
 	}
