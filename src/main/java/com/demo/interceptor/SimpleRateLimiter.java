@@ -35,7 +35,7 @@ public class SimpleRateLimiter implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		isActionAllow("11", "11", 10, 3);
-		return false;
+		return true;
 	}
 
 	@Override

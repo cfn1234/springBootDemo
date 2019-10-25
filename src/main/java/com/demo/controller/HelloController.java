@@ -23,8 +23,8 @@ public class HelloController {
 
 /*	@Limit(key = "test", period = 1000, count = 1, name = "resource", prefix = "limit")*/
 	@GetMapping("/test")
-	public int testLimiter() {
+	public String testLimiter() {
 		// 意味着100S内最多可以访问10次
-		return ATOMIC_INTEGER.incrementAndGet();
+		return "11111";
 	}
 }
