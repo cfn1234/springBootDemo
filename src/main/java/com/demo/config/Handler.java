@@ -4,7 +4,7 @@ import java.lang.annotation.*;
 
 /**
  * <br>
- * 〈功能详细描述〉
+ * 测试注解获得类
  * com.demo.config
  *
  * @author caofengnian 2019/4/11 0011 14:38

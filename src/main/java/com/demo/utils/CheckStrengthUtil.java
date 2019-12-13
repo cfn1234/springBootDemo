@@ -4,6 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * com.demo.utils
+ * 密码校验
  *
  * @author caofengnian
  * @Date 2019-10-16
@@ -20,7 +21,7 @@ public class CheckStrengthUtil {
      * @date 2019/7/26
      */
     private final static String[] DICTIONARY = {"password", "abc123", "iloveyou", "adobe123", "123123", "sunshine",
-            "1314520", "a1b2c3", "123qwe", "aaa111", "qweasd", "admin", "passwd","passwd123"};
+            "1314520", "a1b2c3", "123qwe", "aaa111", "qweasd", "admin", "passwd", "passwd123"};
 
     /**
      * Check character's type, includes num, capital letter, small letter and other character.
@@ -349,10 +350,11 @@ public class CheckStrengthUtil {
 
     /**
      * 不能全是相同的数字或者字母（如：000000、111111、aaaaaa）
+     *
      * @param numOrStr str.length()>0
      * @return 全部相同返回true
      */
-    public static boolean equalStr(String numOrStr){
+    public static boolean equalStr(String numOrStr) {
         boolean flag = true;
         char str = numOrStr.charAt(0);
         for (int i = 0; i < numOrStr.length(); i++) {
@@ -363,6 +365,7 @@ public class CheckStrengthUtil {
         }
         return flag;
     }
+
     public static void main(String[] args) {
         String passwd = "2hAj5#mne-ix.86H";
 //		System.out.println(CheckStrengthUtil.checkPasswordStrength(passwd));

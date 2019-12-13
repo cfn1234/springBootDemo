@@ -16,7 +16,9 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class SpringUtils  implements ApplicationContextAware {
+
 	private static ApplicationContext applicationContext = null;
+
 	@Override
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 		if (SpringUtils.applicationContext == null) {

@@ -11,7 +11,7 @@ import java.io.Serializable;
 
 /**
  * <br>
- * 〈功能详细描述〉
+ * redis注解类
  * com.demo.config
  *
  * @author caofengnian 2019/4/15 0015 09:30
