@@ -1,5 +1,6 @@
 package com.demo.config;
 
+import com.demo.inter.Handler;
 import org.reflections.Reflections;
 import org.reflections.scanners.FieldAnnotationsScanner;
 import org.reflections.util.ClasspathHelper;

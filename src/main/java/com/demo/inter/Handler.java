@@ -1,4 +1,4 @@
-package com.demo.config;
+package com.demo.inter;
 
 import java.lang.annotation.*;
 

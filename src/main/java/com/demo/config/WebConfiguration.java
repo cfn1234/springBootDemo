@@ -15,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
  * @Date 2019/6/10 0010 09:48
  */
 @Configuration
-public class InterceptorConfig extends WebMvcConfigurationSupport {
+public class WebConfiguration extends WebMvcConfigurationSupport {
 
 	@Autowired
 	private SimpleRateLimiter myInterceptor;

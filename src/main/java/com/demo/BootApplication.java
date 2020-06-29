@@ -17,13 +17,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @SpringBootApplication
 public class BootApplication extends SpringBootServletInitializer {
 
-	// 外部容器启动类
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-
-		return builder.sources(BootApplication.class);
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(BootApplication.class, args);
 	}

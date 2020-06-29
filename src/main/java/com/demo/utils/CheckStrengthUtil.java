@@ -368,11 +368,6 @@ public class CheckStrengthUtil {
 
     public static void main(String[] args) {
         String passwd = "2hAj5#mne-ix.86H";
-//		System.out.println(CheckStrengthUtil.checkPasswordStrength(passwd));
-
-//		System.out.println("");
-
-//		System.out.println("passwd123".indexOf("passwd"));
 
         boolean b = matchingWeakPassword("1111");
         System.out.println(CheckStrengthUtil.checkPasswordStrength("2hAj5#mne-ix.86H"));
