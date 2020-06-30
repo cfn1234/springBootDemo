@@ -1,7 +1,6 @@
 package com.demo.controller;
 
 import com.demo.LimitType.Limit;
-import com.demo.inter.Handler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +23,6 @@ public class HelloController {
     
     @Limit(key = "test", period = 1000, count = 1, name = "resource", prefix = "limit")
     @GetMapping("/test")
-    @Handler
     public String testLimiter() {
         // 意味着100S内最多可以访问10次
         return "11111";

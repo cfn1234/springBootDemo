@@ -29,18 +29,18 @@ import java.lang.reflect.Method;
 @Aspect
 @Configuration
 public class LimitInterceptor {
-
-
+    
+    
     private static final String UNKNOWN = "unknown";
-
+    
     private final RedisTemplate<String, Serializable> limitRedisTemplate;
-
-
+    
+    
     @Autowired
     public LimitInterceptor(RedisTemplate<String, Serializable> limitRedisTemplate) {
         this.limitRedisTemplate = limitRedisTemplate;
     }
-
+    
     @Around("execution(public * *(..)) && @annotation(com.demo.LimitType.Limit)")
     public Object interceptor(ProceedingJoinPoint pjp) {
         MethodSignature signature = (MethodSignature) pjp.getSignature();
@@ -78,7 +78,7 @@ public class LimitInterceptor {
             throw new RuntimeException("server exception");
         }
     }
-
+    
     /**
      * 限流 脚本
      *
@@ -101,7 +101,7 @@ public class LimitInterceptor {
         lua.append("\nreturn c;");
         return lua.toString();
     }
-
+    
     /**
      * 获取IP地址
      *
