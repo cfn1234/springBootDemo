@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 
 /**
  * <br>
- * 〈功能详细描述〉
+ * mvc配置
  * com.demo.config
  *
  * @author caofengnian
@@ -16,15 +16,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
  */
 @Configuration
 public class WebConfiguration extends WebMvcConfigurationSupport {
-
-	@Autowired
-	private SimpleRateLimiter myInterceptor;
-
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(myInterceptor)
-				.addPathPatterns("/hello/**");
-		super.addInterceptors(registry);
-	}
-
+    
+    @Autowired
+    private SimpleRateLimiter myInterceptor;
+    
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(myInterceptor)
+                .addPathPatterns("/hello/**");
+        super.addInterceptors(registry);
+    }
+    
 }
